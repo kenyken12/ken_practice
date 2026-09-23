@@ -35,9 +35,12 @@ print(f"host: {device['hostname']} running {device['os']}")
 print(f"fields stored: {len(device)}")
 print(device.keys)
 name = input('username?: ')
-device["name"] = name
-new_port = int(input("enter a new port: "))
-device["open_ports"] += new_port
+device["owner"] = name
+print(len(device))
 
-if device["open_ports"].len > 3:
-    device["risk_score"] += 3
+new_port = int(input("enter a new port: "))
+device["open_ports"].append(new_port)
+
+num_of_extra_ports = len(device["open_ports"]) - 3
+
+device["risk_score"] += num_of_extra_ports * 5
