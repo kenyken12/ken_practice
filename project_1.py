@@ -8,36 +8,47 @@ inventory = {
 
 item = input("what do you want to buy?: ")
 
+
+      
 if item == "laptops":
-    quantity = int(input("how many do you want?: "))
-    if quantity > inventory["laptops"]:
-           print("we dont have enough sorry!")
-    else:
-            inventory["laptops"] -= quantity
+
+       quantity = int(input(f"how many do you want? ({inventory[item]} left:) "))
+       if quantity > inventory[item]:
+              print("we dont have enough sorry!")
+       
+       else:
+              print(f"purchased {quantity} {item}!")
+              inventory["laptops"] -= quantity                     
 
 elif item == "mouses":
-    quantity = int(input("how many do you want?: "))
-    if quantity > inventory["mouses"]:
-           print("we dont have enough sorry!")
-    else:
-            inventory["mouses"] -= quantity
+       quantity = int(input(f"how many do you want? ({inventory[item]} left:) "))
+       if quantity > inventory[item]:
+              print("we dont have enough sorry!")
+       
+       else:
+              print(f"purchased {quantity} {item}!")
+              inventory["mouses"] -= quantity
 
 elif item == "keyboards":
-    quantity = int(input("how many do you want?: "))
-    if quantity > inventory["keyboards"]:
-           print("we dont have enough sorry!")
-    else:
-            inventory["keyboards"] -= quantity
+       quantity = int(input(f"how many do you want? ({inventory[item]} left:) "))
+       if quantity > inventory[item]:
+              print("we dont have enough sorry!")
+       else:
+              print(f"purchased {quantity} {item}!")
+              inventory["keyboards"] -= quantity
 
 elif item == "headphones":
-    quantity = int(input("how many do you want?: "))
-    if quantity > inventory["headphones"]:
-           print("we dont have enough sorry!")
-    else:
-            inventory["headphones"] -= quantity
+       quantity = int(input(f"how many do you want? ({inventory[item]} left:) "))
+       if quantity > inventory[item]:
+              print("we dont have enough sorry!")
+              
+       else:
+              print(f"purchased {quantity} {item}!")
+              inventory["headphones"] -= quantity
 
 else:
-      print("wtf u talm bout")
+       print("we do not have that...")
+
 
 print(inventory)
 
