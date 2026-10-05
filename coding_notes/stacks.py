@@ -19,3 +19,15 @@ empty = not bool(stack)
 print(f"is there nothing" + empty)
 
 
+
+variable = [{
+    "ken": 123,
+    "keny": 456,
+    "keneth": 789
+},{
+    "k": 987,
+    "e": 654,
+    "n": 321
+}]
+
+
