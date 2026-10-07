@@ -8,36 +8,42 @@ make a function that checks to see if a valid closed parenthesis is made
 
 
 def isValid(string):
-    counter = 0
-    stack = []
-
-
-    valid_pairs = {
+    pairs = {
         "(": ")",
         "[": "]",
         "{": "}"
     }
-
+    stack = []
     for i in string:
+        #check if its a opener and adds it to the stack
+        if i in pairs:
 
-        #check to see if its a open bracket
-        if i in valid_pairs:
-            stack.append(i)
-            if stack[-1] == valid_pairs[i]:
+            if stack == i:
                 stack.pop()
-        #check to see if its a closing bracket
-        else:
-            if stack:
+            else: 
                 return False
-            else:
-                return True
+        else:
+            stack.append(i)
+
+        if not stack:
+            return True
+        else:
+            return False
 
 
 
-
-
+    
             
 
-keny = "()"
+
+
+        
+    
+
+
+
+keny = "()" # true
+keny2 = "((())" #false
 
 print(isValid(keny))
+print(isValid(keny2))
