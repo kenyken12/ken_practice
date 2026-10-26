@@ -1,1 +1,1 @@
-trees
+print("tree is life")
